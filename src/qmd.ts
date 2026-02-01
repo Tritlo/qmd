@@ -2291,6 +2291,9 @@ function parseCLI() {
     args: Bun.argv.slice(2), // Skip bun and script path
     options: {
       // Global options
+      index: {
+        type: "string",
+      },
       context: {
         type: "string",
       },
