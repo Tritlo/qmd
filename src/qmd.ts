@@ -81,6 +81,7 @@ import {
   removeContext as yamlRemoveContext,
   setGlobalContext,
   listAllContexts,
+  setConfigIndexName,
 } from "./collections.js";
 
 // Enable production mode - allows using default database path
@@ -2334,6 +2335,7 @@ function parseCLI() {
   const indexName = values.index as string | undefined;
   if (indexName) {
     setIndexName(indexName);
+    setConfigIndexName(indexName);
   }
 
   // Determine output format
